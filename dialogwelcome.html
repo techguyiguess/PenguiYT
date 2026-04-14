@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome! - PenguiTube</title>
+  <style>
+    body {
+      margin: 0;
+      background: #202124;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial;
+      color: white;
+    }
+
+    .box {
+      background: #2d2f31;
+      padding: 20px;
+      border-radius: 10px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #3ea6ff;
+      color: white;
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>PenguiTube</h3>
+  <p id="msg">Hello! Welcome to PenguiTube (Pen-gwee-tu-be)! In this platform, you can upload videos, view videos, and more! This is trying to be a open-source YouTube remake, so don't expect PERFECT results.. This is a WIP!</p>
+  <button onclick="window.close()">OK</button>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const msg = params.get("msg");
+  if (msg) {
+    document.getElementById("msg").innerText = msg;
+  }
+</script>
+
+</body>
+</html>
